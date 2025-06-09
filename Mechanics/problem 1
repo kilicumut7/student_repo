@@ -1,0 +1,121 @@
+Here's a detailed solution outline and example Python implementation for **Problem 1: Investigating the Range as a Function of the Angle of Projection**, ready for a Markdown report and notebook.
+
+---
+
+# Problem 1: Investigating the Range as a Function of the Angle of Projection
+
+---
+
+## 1. Theoretical Foundation
+
+Consider a projectile launched from ground level (height $h=0$) with initial speed $v_0$ at an angle $\theta$ from the horizontal. The projectile moves under uniform gravitational acceleration $g$ (downwards).
+
+### Equations of Motion
+
+Using $x$ horizontal and $y$ vertical coordinates:
+
+$$
+x(t) = v_0 \cos \theta \, t
+$$
+
+$$
+y(t) = v_0 \sin \theta \, t - \frac{1}{2} g t^2
+$$
+
+The projectile hits the ground when $y(t) = 0$ (ignoring launch height):
+
+$$
+0 = v_0 \sin \theta \, t - \frac{1}{2} g t^2 \implies t = 0 \text{ (launch) or } t = \frac{2 v_0 \sin \theta}{g}
+$$
+
+The **range $R$** is horizontal distance at landing time:
+
+$$
+R = x\left(t=\frac{2 v_0 \sin \theta}{g}\right) = v_0 \cos \theta \times \frac{2 v_0 \sin \theta}{g} = \frac{v_0^2}{g} \sin 2\theta
+$$
+
+---
+
+## 2. Analysis of the Range
+
+* The range depends on $\sin 2\theta$, which peaks at $\theta = 45^\circ$.
+* For fixed $v_0$ and $g$, the maximum range is:
+
+$$
+R_{\max} = \frac{v_0^2}{g}
+$$
+
+* Changing $v_0$ scales the range quadratically.
+* Changing $g$ inversely scales the range.
+* For a launch height $h \neq 0$, the range formula changes (more complex).
+
+---
+
+## 3. Practical Applications
+
+* Real projectiles often experience air resistance and launch from heights.
+* Terrain affects the actual landing point.
+* Effects of wind, drag, and spin can be incorporated for accuracy.
+* Applications include sports, ballistics, and rocket launches.
+
+---
+
+## 4. Implementation
+
+### Python code to simulate and plot range vs angle
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+g = 9.81  # gravitational acceleration (m/s^2)
+
+def range_projectile(v0, theta_deg, g=g):
+    """Calculate range for a projectile launched at angle theta_deg (degrees) with initial speed v0."""
+    theta_rad = np.radians(theta_deg)
+    R = (v0**2 / g) * np.sin(2 * theta_rad)
+    return R
+
+# Parameters
+v0_values = [10, 20, 30]  # initial speeds in m/s
+angles = np.linspace(0, 90, 500)  # launch angles from 0 to 90 degrees
+
+plt.figure(figsize=(10,6))
+for v0 in v0_values:
+    ranges = range_projectile(v0, angles)
+    plt.plot(angles, ranges, label=f'v0 = {v0} m/s')
+
+plt.title('Projectile Range vs Launch Angle')
+plt.xlabel('Launch Angle (degrees)')
+plt.ylabel('Range (meters)')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+---
+
+## 5. Results and Discussion
+
+* The plots show the classic sinusoidal shape of range vs angle.
+* Maximum range at 45°, consistent across velocities.
+* Doubling initial velocity quadruples max range.
+* Model limitations: neglects air resistance, assumes flat ground, and no spin or wind.
+* To incorporate more realism:
+
+  * Use numerical integration of projectile motion with drag.
+  * Include initial launch height.
+  * Consider varying gravitational acceleration if projectile range is large.
+
+---
+
+## 6. Extensions (Optional)
+
+* Numerical simulation with air resistance proportional to velocity squared.
+* Study launch height effect with analytic or numeric solution.
+* Monte Carlo simulations to account for uncertainties in velocity and angle.
+
+---
+
+Would you like me to prepare this as a complete Markdown report or Jupyter notebook with comments and plots? Or add air resistance simulation?
