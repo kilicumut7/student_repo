@@ -1,13 +1,12 @@
 # Mechanics Overview
 
-Mechanics is the branch of physics that deals with the motion and behavior of physical bodies when subjected to forces or displacements. It is broadly divided into kinematics (describing motion) and dynamics (explaining motion based on forces).
+This section provides an overview of fundamental concepts in Mechanics, including motion, forces, energy, and momentum. Below you will find lecture notes and supplementary materials related to these topics.
 
-## Key Concepts
-* Newton's Laws of Motion
-* Work, Energy, and Power
-* Momentum and Collisions
-* Rotational Motion
-* Simple Harmonic Motion
+## Available Documents:
+* [Mechanics Lecture 1 - Introduction to Kinematics](mechanics-lecture-1.pdf)  <-- Eğer PDF dosyanızın adı bu ise
+* [Projectile Motion Notes](projectile-motion-notes.pdf)                <-- Eğer PDF dosyanızın adı bu ise
+* [Dynamics Problems (PDF)](dynamics-problems.pdf)                     <-- Eğer PDF dosyanızın adı bu ise
+* [General Mechanics Overview (if you convert to Markdown)](mechanics-general.md) <-- Eğer Markdown dosyanız da varsa
 
 ---
 [Back to Home Page](../../../index.html)
