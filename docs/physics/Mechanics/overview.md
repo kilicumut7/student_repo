@@ -4,10 +4,10 @@ Welcome to the Mechanics section. Here you will find problems and solutions rela
 
 ## Available Problems:
 
-* [Problem 1](problem%201)
-    * [Problem 1 (PDF)](problem%201)
-* [Problem 2](problem%202)
-    * [Problem 2 (PDF)](problem%202)
+* [Problem 1: Investigating the Range as a Function of the Angle of Projection](problem%201.md)
+    *(Bu link, 'problem 1.md' adındaki Markdown dosyanızı açacaktır)*
+* [Problem 2: (İkinci Problemin Başlığı - Burayı siz doldurabilirsiniz)](problem%202.md)
+    *(Bu link, 'problem 2.md' adındaki Markdown dosyanızı açacaktır)*
 
 ---
 [Back to Main Page](../../../index.html)
