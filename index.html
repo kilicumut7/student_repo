@@ -1,109 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Physics Fundamentals Presentation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Reveal.js core styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-  <!-- Reveal.js theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Physics Presentation - Umut KILIC</title>
   <style>
-    /* Özel vurgu stili */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a1e3f;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header {
+      background-color: #162f6c;
+      padding: 2rem;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-weight: normal;
+      margin: 0.5rem 0 2rem;
+      color: #a3c1f7;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 700px;
+      padding: 1rem 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      background-color: #162f6c;
+      color: #aaa;
+      padding: 1rem 0;
+      width: 100%;
+      font-size: 0.9rem;
+    }
     .highlight {
-      color: #ff4081;
+      color: #f9d342;
       font-weight: bold;
-    }
-    .quote {
-      font-style: italic;
-      color: #bbb;
-      margin-top: 2em;
-    }
-    img.diagram {
-      max-width: 70%;
-      margin-top: 20px;
-      border: 2px solid #666;
-      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
+  <header>
+    <h1>Physics Presentation</h1>
+    <h2>by Umut KILIC</h2>
+  </header>
+  <main>
+    <section>
+      <h3>Welcome!</h3>
+      <p>This is a simple physics presentation site created by <span class="highlight">Umut KILIC</span>.</p>
+    </section>
 
-      <section>
-        <h1>Physics Fundamentals</h1>
-        <h3>Exploring the laws that govern our universe</h3>
-        <p class="quote">"Physics is the poetry of nature." – Unknown</p>
-      </section>
+    <section>
+      <h3>About Physics</h3>
+      <p>Physics is the science that studies matter, energy, and the fundamental forces of nature.</p>
+      <p>It explains everything from the smallest particles to the entire universe.</p>
+    </section>
 
-      <section>
-        <h2>Newton's Laws of Motion</h2>
-        <section>
-          <h3>First Law: Law of Inertia</h3>
-          <p>An object remains at rest or in uniform motion unless acted upon by a <span class="highlight">net external force</span>.</p>
-          <img class="diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Newton%27s_First_Law.svg/320px-Newton%27s_First_Law.svg.png" alt="Newton's First Law Diagram">
-        </section>
-        <section>
-          <h3>Second Law: F = ma</h3>
-          <p>The acceleration of an object is proportional to the net force applied and inversely proportional to its mass.</p>
-          <p><strong>Formula:</strong> <code>F = m × a</code></p>
-          <img class="diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Newton%27s_Second_Law_Diagram.svg/320px-Newton%27s_Second_Law_Diagram.svg.png" alt="Newton's Second Law Diagram">
-        </section>
-        <section>
-          <h3>Third Law: Action and Reaction</h3>
-          <p>For every action, there is an equal and opposite reaction.</p>
-          <img class="diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Newton%27s_Third_Law.svg/320px-Newton%27s_Third_Law.svg.png" alt="Newton's Third Law Diagram">
-        </section>
-      </section>
+    <section>
+      <h3>Key Topics</h3>
+      <ul>
+        <li>Newton's Laws of Motion</li>
+        <li>Projectile Motion</li>
+        <li>Energy Conservation</li>
+        <li>Electromagnetism</li>
+      </ul>
+    </section>
+  </main>
 
-      <section>
-        <h2>Projectile Motion</h2>
-        <p>Objects thrown into the air follow a curved path due to gravity and initial velocity.</p>
-        <ul>
-          <li>Horizontal motion with constant velocity</li>
-          <li>Vertical motion with constant acceleration (gravity)</li>
-          <li>Key parameters:
-            <ul>
-              <li>Range</li>
-              <li>Maximum height</li>
-              <li>Time of flight</li>
-            </ul>
-          </li>
-        </ul>
-        <img class="diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Projectile_motion_diagram.svg/320px-Projectile_motion_diagram.svg.png" alt="Projectile Motion Diagram">
-      </section>
-
-      <section>
-        <h2>Energy Conservation</h2>
-        <p>The total energy in an isolated system remains constant.</p>
-        <ul>
-          <li>Kinetic Energy (KE): <code>KE = ½mv²</code></li>
-          <li>Potential Energy (PE): <code>PE = mgh</code></li>
-          <li>Mechanical Energy = KE + PE</li>
-        </ul>
-        <img class="diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Energy_potential_diagram.svg/320px-Energy_potential_diagram.svg.png" alt="Energy Conservation Diagram">
-      </section>
-
-      <section>
-        <h2>Thank You!</h2>
-        <p>Questions?</p>
-      </section>
-
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      transition: 'fade',
-      width: '100%',
-      height: '100%',
-    });
-  </script>
+  <footer>
+    &copy; 2025 Umut KILIC. All rights reserved.
+  </footer>
 </body>
 </html>
