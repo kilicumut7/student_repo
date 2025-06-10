@@ -3,115 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics Lectures & Projects</title>
+    <title>Physics Lectures & Projects - Umut Kılıç</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        /* Genel Ayarlar ve Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a; /* Koyu arka plan */
-            color: #e0e0e0; /* Açık metin rengi */
         }
+        body {
+            font-family: 'Open Sans', sans-serif; /* Ana font */
+            line-height: 1.6;
+            background-color: #0d1117; /* GitHub koyu tema arka planı */
+            color: #c9d1d9; /* Açık gri metin rengi */
+            display: flex;
+            flex-direction: column; /* İçeriği dikey sırala */
+            min-height: 100vh; /* Minimum tam ekran yüksekliği */
+            scroll-behavior: smooth; /* Yumuşak kaydırma */
+        }
+
+        /* Ana Konteyner */
         .container {
-            max-width: 960px;
-            margin: 40px auto;
-            background: #2a2a2a; /* Konteyner arka planı */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Derin gölge */
+            max-width: 1000px;
+            width: 92%; /* Ekran genişliğinin %92'sini kapla */
+            margin: 0px auto 40px auto; /* Üstte 0, altta 40px boşluk, yanlar otomatik */
+            background: #161b22; /* Konteyner için daha koyu gri */
+            padding: 40px 30px;
+            border-radius: 12px; /* Daha yuvarlak köşeler */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); /* Derin ve yumuşak gölge */
+            border: 1px solid #30363d; /* Hafif kenarlık */
+            flex-grow: 1; /* Konteynerin dikeyde büyümesini sağla */
         }
-        header {
+
+        /* Kahraman (Hero) Bölümü */
+        .hero-section {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a); /* Hafif degrade */
+            color: #ffffff;
+            padding: 60px 20px;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #444;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #3a3a3a;
         }
-        h1 {
-            color: #4CAF50; /* Yeşil başlık */
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .hero-section::before { /* Arka plana geometrik desen */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            z-index: 0;
         }
-        h2 {
-            color: #66BB6A; /* Açık yeşil alt başlık */
-            border-bottom: 1px solid #3a3a3a;
-            padding-bottom: 8px;
-            margin-top: 30px;
-            font-size: 1.8em;
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
-        p {
+        .hero-section h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 3.8em; /* Daha da büyük başlık */
             margin-bottom: 15px;
-            color: #d0d0d0;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            color: #8be9fd; /* Canlı mavi tonu */
+            letter-spacing: 1px;
         }
-        ul {
-            list-style-type: none; /* Varsayılan madde işaretini kaldır */
-            padding: 0;
+        .hero-section p {
+            font-size: 1.3em;
+            color: #e0e0e0;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
         }
-        li {
-            margin-bottom: 10px;
-        }
-        li a {
-            display: block; /* Tüm alanı tıklanabilir yap */
-            padding: 10px 15px;
-            background-color: #333; /* Link arka planı */
-            border-radius: 5px;
-            color: #81D4FA; /* Mavi link rengi */
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        li a:hover {
-            background-color: #444; /* Hover arka planı */
-            transform: translateX(5px); /* Hafif kaydırma efekti */
-            color: #B3E5FC; /* Hover link rengi */
-        }
-        .note {
-            background-color: #3a3a3a;
-            border-left: 5px solid #FFC107; /* Sarı kenarlık */
-            padding: 15px;
-            margin-top: 30px;
-            border-radius: 5px;
-            color: #FFECB3; /* Açık sarı metin */
-        }
-        footer {
+
+        /* Bölüm Başlıkları */
+        h2 {
+            font-family: 'Lato', sans-serif;
+            color: #61afef; /* Mavi tonu */
+            font-size: 2.2em;
+            margin-top: 50px;
+            margin-bottom: 30px;
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #3a3a3a;
-            color: #999;
-            font-size: 0.9em;
+            position: relative;
+            padding-bottom: 10px;
+            letter-spacing: 0.8px;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Physics Lectures & Student Projects</h1>
-            <p>Welcome to the collection of lecture notes and projects. This site provides an organized access to various topics in Physics.</p>
-        </header>
+        h2::after { /* Başlık altına şık bir çizgi */
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #61afef, #c678dd); /* Mavi-Mor degrade */
+            border-radius: 2px;
+        }
 
-        <h2>Main Physics Topics</h2>
-        <ul>
-            <li><a href="docs/physics/Mechanics/overview.md">Mechanics (Genel Bakış ve Sunumlar)</a></li>
-            <li><a href="docs/physics/Gravity/overview.md">Gravity (Genel Bakış ve Sunumlar)</a></li>
-            <li><a href="docs/physics/Waves/overview.md">Waves (Genel Bakış ve Sunumlar)</a></li>
-            <li><a href="docs/physics/Circuits/overview.md">Circuits (Genel Bakış ve Sunumlar)</a></li>
-            <li><a href="docs/physics/Electromagnetism/overview.md">Electromagnetism (Genel Bakış ve Sunumlar)</a></li>
-            <li><a href="docs/physics/Statistics/overview.md">Statistics (Genel Bakış ve Sunumlar)</a></li>
-            <li><a href="docs/physics/Measurements/overview.md">Measurements (Genel Bakış ve Sunumlar)</a></li>
-        </ul>
-
-        <div class="note">
-            <h3>Important Note:</h3>
-            <p>Each topic link above will lead you to an "overview" page for that specific area of physics. On that overview page, you will find links to detailed lecture notes, presentations, or specific problem sets (e.g., PDF files or other Markdown files).</p>
-            <p><strong>Please ensure you have created the `overview.md` file within each topic folder (e.g., `docs/physics/Mechanics/overview.md`) and that it contains links to your actual presentation files!</strong></p>
-        </div>
-
-        <footer>
-            <p>&copy; 2024 Your Name/Project Name. All rights reserved.</p>
-            <p>
-                <a href="https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Physics/Exercises_for_Students/exercises_dch/" target="_blank">Original Source Reference</a>
-            </p>
-        </footer>
-    </div>
-</body>
-</html>
+        /* Konu Kartları */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Esnek ızgara */
+            gap: 25px; /* Kartlar arası boşluk */
+            list-style-type: none;
+            padding: 0;
+            margin-top: 25px;
+        }
+        .topic-card {
+            background-color: #24292f; /* Kart arka planı */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #30363d;
+        }
+        .topic-card:hover {
+            transform: translateY(-8px) scale(1.02); /* Hafif yukarı kaydırma ve büyütme */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+        .topic-card a {
+            display: block;
+            padding: 25px;
+            text-decoration: none;
+            color: #c9d1d9;
+            font-size: 1.15em;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .topic-card a::after { /* Ok simgesi */
+            content: '→';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            opacity: 0.6;
+            transition: right 0.3s ease, opacity 0.3s ease;
+        }
+        .topic-card a:hover::after {
