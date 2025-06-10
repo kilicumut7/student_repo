@@ -66,7 +66,7 @@
             z-index: 1;
         }
         .hero-section h1 {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Lato', sans-serif; /* Başlık için farklı font */
             font-size: 3.8em; /* Daha da büyük başlık */
             margin-bottom: 15px;
             text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
@@ -147,3 +147,125 @@
             transition: right 0.3s ease, opacity 0.3s ease;
         }
         .topic-card a:hover::after {
+            right: 15px;
+            opacity: 1;
+            color: #79c0ff;
+        }
+        .topic-card a:hover {
+            color: #79c0ff; /* Hover link rengi */
+        }
+        
+        /* Not Kutusu */
+        .note {
+            background-color: #1f252b; /* Daha koyu not arka planı */
+            border-left: 5px solid #d29922; /* Turuncu kenarlık */
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 8px;
+            color: #e3b341; /* Açık turuncu metin */
+            font-size: 0.95em;
+            line-height: 1.5;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .note h3 {
+            color: #e3b341;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        /* Alt Bilgi */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #2f343a;
+            color: #6a737d;
+            font-size: 0.85em;
+        }
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #79c0ff;
+            text-decoration: underline;
+        }
+
+        /* Duyarlı Tasarım (Responsive Design) */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 30px 20px;
+            }
+            .hero-section {
+                padding: 40px 15px;
+                margin-bottom: 40px;
+            }
+            .hero-section h1 {
+                font-size: 2.8em;
+            }
+            .hero-section p {
+                font-size: 1.1em;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-top: 40px;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr; /* Tek sütunlu düzen */
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            .topic-card a {
+                font-size: 1em;
+                padding: 18px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to My Physics Portfolio!</h1>
+                <p>Explore a collection of lectures, projects, and resources covering key topics in Physics. Your journey into the fascinating world of science starts here!</p>
+            </div>
+        </div>
+
+        <h2>Main Physics Topics</h2>
+        <ul class="topic-grid">
+            <li class="topic-card"><a href="docs/physics/Mechanics/overview.md">Mechanics</a></li>
+            <li class="topic-card"><a href="docs/physics/Gravity/overview.md">Gravity</a></li>
+            <li class="topic-card"><a href="docs/physics/Waves/overview.md">Waves</a></li>
+            <li class="topic-card"><a href="docs/physics/Circuits/overview.md">Circuits</a></li>
+            <li class="topic-card"><a href="docs/physics/Electromagnetism/overview.md">Electromagnetism</a></li>
+            <li class="topic-card"><a href="docs/physics/Statistics/overview.md">Statistics</a></li>
+            <li class="topic-card"><a href="docs/physics/Measurements/overview.md">Measurements</a></li>
+        </ul>
+
+        <div class="note">
+            <h3>Important Information:</h3>
+            <p>Each topic link above will guide you to an "overview" page dedicated to that specific area of physics. On these overview pages, you'll find direct links to detailed lecture notes, presentations, or specific problem sets, which are typically in PDF or other supported formats.</p>
+            <p><strong>To ensure all links work correctly, please verify that you have created an `overview.md` file within each topic folder (e.g., `docs/physics/Mechanics/overview.md`). These `overview.md` files should contain the necessary links to your actual presentation documents (e.g., PDF files), which should also be present in the respective folders with meaningful names.</strong></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Umut Kılıç. All rights reserved.</p>
+            <p>
+                <a href="https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Physics/Exercises_for_Students/exercises_dch/" target="_blank">Original Course Reference</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
